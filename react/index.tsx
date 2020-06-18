@@ -9,10 +9,10 @@ class CheckoutButtonExample extends Component<
 > {
   /**
    * This component is the one that is referenced in the extension point. To use it
-   * as an example, in the component's life cycle, the method componentDidMount is used to
-   * add an event listener, which updates the state every time the order form changes. This
-   * order form is then passed to its children so as to render a table with the items.
-  */
+   * as an example, we add an event listener, which updates the state every time the
+   * order form changes. This order form is then passed to its children so as to render
+   * a table with the items.
+   */
   constructor(props: any) {
     super(props)
     this.state = {
@@ -26,11 +26,8 @@ class CheckoutButtonExample extends Component<
     )
   }
 
-  componentDidMount() {
-    this.listenOrderFormUpdated()
-  }
-
   render() {
+    this.listenOrderFormUpdated()
     return <CustomButton {...this.state.orderForm!} />
   }
 }
