@@ -1,0 +1,7 @@
+{
+  "extensions": {
+    "checkout/buttons/checkout-button-example": {
+      "component": "index"
+    }
+  }
+}

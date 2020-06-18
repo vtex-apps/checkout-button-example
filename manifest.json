@@ -1,0 +1,34 @@
+{
+  "name": "checkout-button-example",
+  "vendor": "vtex",
+  "version": "0.0.1",
+  "title": "Checkout Button Example",
+  "description": "Checkout Button Example",
+  "credentialType": "absolute",
+  "dependencies": {
+    "vtex.checkout": "0.x",
+    "vtex.styleguide": "9.x",
+    "vtex.render-runtime": "7.x"
+  },
+  "builders": {
+    "react": "2.x",
+    "pages": "0.x"
+  },
+  "scripts": {
+    "postreleasy": "vtex publish"
+  },
+  "supportWorkspaces": true,
+  "billingOptions": {
+    "free": true
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

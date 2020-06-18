@@ -1,0 +1,6 @@
+[
+  "Purchase the extension",
+  "Enable extension",
+  "Create account on Masterpass",
+  "Done!"
+]
