@@ -1,3 +1,7 @@
+declare global {
+  type Window = any
+}
+
 export interface OrderFormContext {
   orderForm: OrderForm
   loading: boolean

@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 import CustomButton from './components/CustomButton'
 import { OrderForm } from './typings/orderForm'
 
-class CheckoutButtonExample extends Component<
-  CheckoutButtonExampleProps,
+class CheckoutButtonExample extends React.Component<
+  {},
   CheckoutButtonExampleState
 > {
   /**
@@ -20,19 +20,22 @@ class CheckoutButtonExample extends Component<
     }
   }
 
-  listenOrderFormUpdated = () => {
+  public listenOrderFormUpdated() {
     $(window).on('orderFormUpdated.vtex', (_: any, orderForm: OrderForm) =>
       this.setState({ orderForm })
     )
   }
 
-  render() {
+  public render() {
     this.listenOrderFormUpdated()
+
+    console.log(window.vtex.i18n.getLocale())
+
     return <CustomButton {...this.state.orderForm!} />
   }
 }
 
-interface CheckoutButtonExampleProps {}
+// interface CheckoutButtonExampleProps {}
 
 interface CheckoutButtonExampleState {
   orderForm: OrderForm | null

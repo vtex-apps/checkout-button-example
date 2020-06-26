@@ -1,19 +1,15 @@
 import React, { Component } from 'react'
 
 import Table from './Table'
-
 import { OrderFormItem } from '../typings/orderForm'
 
-class CustomButton extends Component<CustomButtonProps, CustomButtonState> {
-  /**
-   * This component is responsible for rendering the custom button itself. For instance,
-   * we use it to render a table that contains the name of the items that are in the
-   * order form.
-  */
-  constructor(props: any) {
-    super(props)
-  }
-  render() {
+/**
+ * This component is responsible for rendering the custom button itself. For instance,
+ * we use it to render a table that contains the name of the items that are in the
+ * order form.
+ */
+class CustomButton extends Component<CustomButtonProps, {}> {
+  public render() {
     const { items } = this.props
 
     return items ? (
@@ -31,6 +27,6 @@ interface CustomButtonProps {
   items: OrderFormItem[]
 }
 
-interface CustomButtonState {}
+// interface CustomButtonState {}
 
 export default CustomButton
