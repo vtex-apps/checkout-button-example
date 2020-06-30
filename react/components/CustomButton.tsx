@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import Table from './Table'
-import { OrderFormItem } from '../typings/orderForm'
 
 /**
  * This component is responsible for rendering the custom button itself. For instance,
@@ -27,6 +26,6 @@ interface CustomButtonProps {
   items: OrderFormItem[]
 }
 
-// interface CustomButtonState {}
+interface CustomButtonState {}
 
 export default CustomButton

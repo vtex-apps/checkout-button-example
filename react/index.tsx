@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 
 import CustomButton from './components/CustomButton'
-import { OrderForm } from './typings/orderForm'
 
-class CheckoutButtonExample extends React.Component<
-  {},
-  CheckoutButtonExampleState
-> {
+class CheckoutButtonExample extends Component<{}, CheckoutButtonExampleState> {
   /**
    * This component is the one that is referenced in the extension point. To use it
    * as an example, we add an event listener, which updates the state every time the
@@ -28,14 +24,13 @@ class CheckoutButtonExample extends React.Component<
 
   public render() {
     this.listenOrderFormUpdated()
-
     console.log(window.vtex.i18n.getLocale())
 
     return <CustomButton {...this.state.orderForm!} />
   }
 }
 
-// interface CheckoutButtonExampleProps {}
+interface CheckoutButtonExampleProps {}
 
 interface CheckoutButtonExampleState {
   orderForm: OrderForm | null

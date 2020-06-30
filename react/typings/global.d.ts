@@ -1,13 +1,13 @@
-declare global {
-  type Window = any
+interface Window extends Window {
+  vtex: any
 }
 
-export interface OrderFormContext {
+interface OrderFormContext {
   orderForm: OrderForm
   loading: boolean
 }
 
-export interface OrderFormItem {
+interface OrderFormItem {
   additionalInfo: ItemAdditionalInfo
   availability: string
   detailUrl: string
@@ -38,7 +38,7 @@ interface SKUSpecification {
   fieldValues: string[]
 }
 
-export interface OrderForm {
+interface OrderForm {
   id: string
   items: OrderFormItem[]
   marketingData: MarketingData

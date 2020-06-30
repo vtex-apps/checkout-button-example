@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-import { OrderFormItem } from '../typings/orderForm'
-
 class Table extends Component<TableProps> {
   constructor(props: any) {
     super(props)
