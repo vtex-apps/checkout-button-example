@@ -1,6 +1,6 @@
 {
   "name": "vtex.checkout-button-example",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "lint": "eslint --ext js,jsx,ts,tsx ."
   },
