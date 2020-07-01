@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 
 import CustomButton from './components/CustomButton'
-import { OrderForm } from './typings/orderForm'
 
-class CheckoutButtonExample extends Component<
-  CheckoutButtonExampleProps,
-  CheckoutButtonExampleState
-> {
+class CheckoutButtonExample extends Component<{}, CheckoutButtonExampleState> {
   /**
    * This component is the one that is referenced in the extension point. To use it
    * as an example, we add an event listener, which updates the state every time the
@@ -20,7 +16,7 @@ class CheckoutButtonExample extends Component<
     }
   }
 
-  listenOrderFormUpdated = () => {
+  listenOrderFormUpdated() {
     $(window).on('orderFormUpdated.vtex', (_: any, orderForm: OrderForm) =>
       this.setState({ orderForm })
     )
@@ -28,6 +24,8 @@ class CheckoutButtonExample extends Component<
 
   render() {
     this.listenOrderFormUpdated()
+    console.log(window.vtex.i18n.getLocale())
+
     return <CustomButton {...this.state.orderForm!} />
   }
 }
