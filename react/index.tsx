@@ -16,13 +16,13 @@ class CheckoutButtonExample extends Component<{}, CheckoutButtonExampleState> {
     }
   }
 
-  public listenOrderFormUpdated() {
+  listenOrderFormUpdated() {
     $(window).on('orderFormUpdated.vtex', (_: any, orderForm: OrderForm) =>
       this.setState({ orderForm })
     )
   }
 
-  public render() {
+  render() {
     this.listenOrderFormUpdated()
     console.log(window.vtex.i18n.getLocale())
 

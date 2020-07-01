@@ -8,7 +8,7 @@ import Table from './Table'
  * order form.
  */
 class CustomButton extends Component<CustomButtonProps, {}> {
-  public render() {
+  render() {
     const { items } = this.props
 
     return items ? (
