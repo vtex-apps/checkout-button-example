@@ -1,7 +1,7 @@
 {
   "name": "checkout-button-example",
   "vendor": "vtex",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "title": "Checkout Button Example",
   "description": "Checkout Button Example",
   "credentialType": "absolute",
