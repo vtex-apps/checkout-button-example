@@ -16,14 +16,19 @@ class CheckoutButtonExample extends Component<{}, CheckoutButtonExampleState> {
     }
   }
 
-  listenOrderFormUpdated() {
-    $(window).on('orderFormUpdated.vtex', (_: any, orderForm: OrderForm) =>
-      this.setState({ orderForm })
-    )
+  setOrderForm = (_: any, orderForm: OrderForm) => {
+    this.setState({ orderForm })
+  }
+
+  componentDidMount() {
+    $(window).on('orderFormUpdated.vtex', this.setOrderForm)
+  }
+
+  componentWillUnmount() {
+    $(window).off('orderFormUpdated.vtex', this.setOrderForm)
   }
 
   render() {
-    this.listenOrderFormUpdated()
     console.log(window.vtex.i18n.getLocale())
 
     return <CustomButton {...this.state.orderForm!} />
