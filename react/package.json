@@ -8,14 +8,15 @@
     "@vtex/styleguide": "^9.96.6"
   },
   "devDependencies": {
-    "@types/jquery": "^3.3.38",
     "@types/graphql": "^0.13.3",
+    "@types/jquery": "^3.3.38",
     "@types/node": "^9.4.7",
     "@types/prop-types": "^15.5.2",
     "@types/react": "^16.3.16",
     "@types/react-dom": "^16.0.5",
     "@types/react-helmet": "^5.0.5",
     "@types/react-intl": "^2.3.5",
+    "carapreta.checkout-customizations": "http://carapreta.vtexassets.com/_v/public/typings/v1/carapreta.checkout-customizations@0.0.4/public/@types/carapreta.checkout-customizations",
     "eslint": "^6.4.0",
     "eslint-config-vtex": "^11.0.0",
     "eslint-config-vtex-react": "^5.0.1",
@@ -25,6 +26,9 @@
     "react-apollo": "^2.0.4",
     "react-dom": "^16.2.0",
     "react-intl": "^2.4.0",
-    "typescript": "3.9.7"
+    "typescript": "3.9.7",
+    "vtex.checkout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout@0.6.0/public/_types/react",
+    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@7.45.0/public/@types/vtex.render-runtime",
+    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.13/public/@types/vtex.styleguide"
   }
 }

@@ -1,11 +1,3 @@
 {
-  "extends": "vtex-react/io",
-  "env": {
-    "browser": true,
-    "es6": true,
-    "jest": true
-  },
-  "rules": {
-    "react/prefer-stateless-function": false
-  }
+  "extends": "vtex-react/io"
 }
