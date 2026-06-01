@@ -1,8 +1,8 @@
 {
-  "name": "checkout-button-example",
-  "vendor": "vtex",
-  "version": "0.0.3",
-  "title": "Checkout Button Example",
+  "name": "checkout-customizations",
+  "vendor": "carapreta",
+  "version": "0.0.6",
+  "title": "Checkout Customizations",
   "description": "Checkout Button Example",
   "credentialType": "absolute",
   "dependencies": {
@@ -12,7 +12,8 @@
   },
   "builders": {
     "react": "2.x",
-    "pages": "0.x"
+    "pages": "0.x",
+    "styles": "2.x"
   },
   "scripts": {
     "postreleasy": "vtex publish"
